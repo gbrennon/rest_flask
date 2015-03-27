@@ -6,7 +6,7 @@ class AtividadeSerializer(ma.Schema):
         additional = ('nome', 'descricao', '_links')
 
     _links = ma.Hyperlinks({
-        'self': ma.URLFor('atividade_resource', id='<id>'),
+        'self': ma.URLFor('atividade_detail', id='<id>'),
         'collection': ma.URLFor('atividades_resource')
     })
 

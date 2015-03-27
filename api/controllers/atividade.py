@@ -47,5 +47,5 @@ class AtividadeResourceView(Resource):
 api.add_resource(AtividadeListView, '/v1/atividades',
                  endpoint='atividades_resource')
 api.add_resource(AtividadeView, '/v1/atividades/<id>',
-                 endpoint='atividade_resource')
+                 endpoint='atividade_detail')
 api.add_resource(AtividadeResourceView, '/v1/atividades/<id>/<resource>')
