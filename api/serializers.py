@@ -2,8 +2,6 @@ from api import ma
 
 
 class AtividadeSerializer(ma.Schema):
-    id = ma.String()
-
     class Meta:
         additional = ('nome', 'descricao', '_links')
 
@@ -14,7 +12,6 @@ class AtividadeSerializer(ma.Schema):
 
 
 class PraiaSerializer(ma.Schema):
-    id = ma.String()
     atividades = ma.Nested(AtividadeSerializer, many=True)
 
     class Meta:
