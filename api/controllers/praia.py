@@ -42,7 +42,7 @@ class PraiaResourceView(Resource):
             praia = Praia.objects.get_or_404(id=id)
             return PraiaSerializer(praia).data[resource]
         except KeyError:
-            return 'Invalid attribute. Send me a activity valid attribute', 400
+            return 'Invalid attribute. Send me a Praia valid attribute', 400
 
 api.add_resource(PraiaListView, '/v1/praias',
                  endpoint='praias_resource')
