@@ -39,8 +39,8 @@ class AtividadeView(Resource):
 class AtividadeResourceView(Resource):
     def get(self, id, resource):
         try:
-            return {resource:
-                    str(Atividade.objects.get_or_404(id=id)[resource])}
+            atividade = Atividade.objects.get_or_404(id=id)
+            return AtividadeSerializer(atividade).data[resource]
         except KeyError:
             return 'Invalid attribute. Send me a activity valid attribute', 400
 
