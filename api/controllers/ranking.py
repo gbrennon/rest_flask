@@ -1,5 +1,6 @@
 from flask.ext.restful import Resource
-from api import api, request, abort
+from api import api
+from flask import request, abort
 from api.models import Ranking
 from api.serializers import RankingSerializer
 
